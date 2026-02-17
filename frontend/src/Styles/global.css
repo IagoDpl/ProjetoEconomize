@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Cores Modernas (Fintech Theme) */
+  --bg-app: #f0f2f5;        /* Fundo geral cinza azulado */
+  --bg-card: #ffffff;       /* Fundo dos cartões */
+  
+  --primary: #2563eb;       /* Azul Royal (Ações principais) */
+  --primary-dark: #1e40af;
+  
+  --text-title: #1e293b;    /* Preto suave */
+  --text-body: #64748b;     /* Cinza para textos secundários */
+  
+  --success: #10b981;       /* Verde Dinheiro */
+  --danger: #ef4444;        /* Vermelho Erro */
+  
+  --border: #e2e8f0;        /* Bordas muito sutis */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-title);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Scrollbar bonita */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-app); }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }

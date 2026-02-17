@@ -1,0 +1,46 @@
+.expense-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-name {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.card-category {
+  font-size: 12px;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-value {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.btn-remove {
+  background: transparent;
+  border: none;
+  color: var(--danger);
+  font-size: 12px;
+  text-decoration: underline;
+}

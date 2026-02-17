@@ -1,0 +1,197 @@
+/* ========================================= */
+/* 🏠 ESTRUTURA PRINCIPAL (LAYOUT)           */
+/* ========================================= */
+
+.dashboard-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  align-items: flex-start; /* Alinha o topo das colunas */
+}
+
+/* Coluna da Esquerda (Tabela e Adicionar) */
+.column-left {
+  flex: 2; /* Ocupa 66% da tela */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Coluna da Direita (Resultados e Meta) */
+.column-right {
+  flex: 1; /* Ocupa 33% da tela */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* ========================================= */
+/* 🃏 CARDS (CAIXINHAS BRANCAS)              */
+/* ========================================= */
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+  position: relative;
+  overflow: hidden; /* Para a marca d'água não vazar */
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #334155;
+  font-size: 18px;
+}
+
+/* Cards de Resultado (Vermelho e Verde) */
+.card-despesa { border-left: 5px solid #ef4444; }
+.card-sobra { border-left: 5px solid #10b981; }
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Bolinha do ícone */
+.icon-bubble {
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg-red { background: #fee2e2; }
+.bg-green { background: #d1fae5; }
+
+/* Valor Grande */
+.summary-value {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 5px 0;
+}
+.text-red { color: #ef4444; }
+.text-green { color: #10b981; }
+
+.subtext {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Marca d'água decorativa */
+.watermark-icon {
+  position: absolute;
+  right: -15px;
+  top: -10px;
+  opacity: 0.05;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+/* ========================================= */
+/* 📝 TABELA DE DESPESAS                     */
+/* ========================================= */
+
+.expenses-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.expense-item:last-child {
+  border-bottom: none;
+}
+
+.expense-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.expense-name {
+  font-weight: 500;
+  color: #334155;
+}
+
+.expense-value {
+  font-weight: bold;
+  color: #ef4444;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 5px;
+}
+
+.btn-delete:hover {
+  color: #ef4444;
+}
+
+/* ========================================= */
+/* ➕ ÁREA DE ADICIONAR (INPUTS)             */
+/* ========================================= */
+
+.add-expense-group {
+  display: flex;
+  align-items: flex-end; /* Alinha botão com inputs */
+  gap: 10px;
+}
+
+.add-expense-group .input-wrapper {
+  flex: 1; /* Faz os inputs ocuparem o espaço disponível */
+}
+
+/* ========================================= */
+/* 📱 MOBILE (RESPONSIVIDADE)                */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column-reverse; /* Resultados aparecem primeiro no celular */
+    padding: 10px;
+  }
+
+  .column-left, .column-right {
+    width: 100%;
+    flex: auto;
+  }
+
+  .add-expense-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .summary-value {
+    font-size: 28px;
+  }
+}

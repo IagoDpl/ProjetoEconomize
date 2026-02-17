@@ -1,0 +1,58 @@
+.summary-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+    margin-bottom: 20px; /* Espaço entre cards no mobile */
+}
+
+.summary-card:hover {
+    transform: translateY(-2px);
+}
+
+.watermark {
+    position: absolute;
+    right: -15px;
+    top: -10px;
+    opacity: 0.05;
+    transform: rotate(-15deg);
+    pointer-events: none;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.icon-bubble {
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary-value {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 5px 0;
+}
+
+.subtext {
+    margin: 0;
+    font-size: 13px;
+    color: #94a3b8;
+}
