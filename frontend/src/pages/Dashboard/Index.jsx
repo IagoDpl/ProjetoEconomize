@@ -2,12 +2,12 @@ import React from 'react';
 import { TrendingDown, TrendingUp, Trash2, Plus, Target, Save, DollarSign, Wallet } from 'lucide-react';
 
 import Input from '../../components/Input';
-import Button from '../../components/Button';
+import Button from '../../components/Button/Index';
 import SummaryCard from '../../components/SummaryCard/Index';
 
 // 1. Importamos a lógica separada
 import { useDashboard } from './useDashboard';
-import './styles.css';
+import './Styles.css';
 
 export function DashboardPage() {
   // 2. Destruturamos tudo que vem do Hook

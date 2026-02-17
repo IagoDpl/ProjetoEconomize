@@ -1,4 +1,4 @@
-import './styles.css';
+import './Styles.css';
 
 function Input({ label, ...rest }) {
   return (

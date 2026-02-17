@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css'; // O CSS fica isolado aqui
+import './Styles.css'; // O CSS fica isolado aqui
 
 // O componente recebe "props" para saber qual cor e texto mostrar
 export default function SummaryCard({ title, value, subtext, icon: Icon, colorVariant = 'blue' }) {

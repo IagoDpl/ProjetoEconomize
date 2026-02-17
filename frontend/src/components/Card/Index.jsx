@@ -1,4 +1,4 @@
-import './styles.css';
+import './Styles.css';
 
 export function ExpenseCard({ nome, valor, categoria, onRemove }) {
   return (

@@ -1,5 +1,5 @@
 import { LayoutDashboard, History, Wallet } from 'lucide-react';
-import './styles.css';
+import './Styles.css';
 
 export function Header({ activeTab, onTabChange }) {
   return (
