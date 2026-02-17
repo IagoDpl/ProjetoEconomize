@@ -1,7 +1,7 @@
 import React from 'react';
 import { TrendingDown, TrendingUp, Trash2, Plus, Target, Save, DollarSign, Wallet } from 'lucide-react';
 
-import Input from '../../components/Input';
+import Input from '../../components/Input/Index';
 import Button from '../../components/Button/Index';
 import SummaryCard from '../../components/SummaryCard/Index';
 
