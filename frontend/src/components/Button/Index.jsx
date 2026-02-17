@@ -1,4 +1,4 @@
-import './styles.css';
+import './Styles.css';
 
 // Agora o botão aceita "...rest", ou seja, style, disabled, id, etc.
 function Button({ title, variant = 'primary', ...rest }) {
