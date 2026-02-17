@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Header } from './components/Header/Index';
 import { DashboardPage } from './pages/Dashboard/Index';
 import { HistoryPage } from './pages/History/Index';
-import './app.css';
+import './App.css';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
