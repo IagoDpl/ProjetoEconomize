@@ -14,7 +14,7 @@ const getMyId = () => {
 };
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5026/api', 
+  baseURL: import.meta.env.VITE_API_URL, 
 });
 
 // 2. O Interceptador (O Porteiro)
