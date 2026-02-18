@@ -3,18 +3,18 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("PermitirReact",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:5173")
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        });
+    options.AddPolicy("LiberarTudo", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
 });
+
+builder.Services.AddControllers();
+
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
@@ -24,18 +24,11 @@ options.UseNpgsql(connectionString));
 // Add services to the container.   
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("LiberarTudo", policy =>
-    {
-        policy.AllowAnyOrigin()  
-              .AllowAnyMethod()  
-              .AllowAnyHeader(); 
-    });
-});
+
 
 var app = builder.Build();
 
+app.UseCors("LiberarTudo");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -44,7 +37,6 @@ if (app.Environment.IsDevelopment())
 }
 
 //app.UseHttpsRedirection();
-app.UseCors("LiberarTudo");
 
 app.UseAuthorization();
 
