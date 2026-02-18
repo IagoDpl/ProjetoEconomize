@@ -42,5 +42,20 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<AppDbContext>(); 
+        context.Database.Migrate(); // Isso cria as tabelas se elas não existirem
+        Console.WriteLine("Banco de dados migrado com sucesso!");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("Erro ao migrar banco: " + ex.Message);
+    }
+}
+
 app.Run();
 
